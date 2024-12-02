@@ -1,5 +1,4 @@
 
-
 //1
 class Person {
     #name
@@ -43,7 +42,7 @@ class Shape {
     #name
     static count = 0;
     constructor() {
-        this.#name = this.toString()
+        this.#name = this.constructor.name
     }
 
     get name() {
@@ -69,7 +68,6 @@ class Rectangle extends Shape {
         super()
         this.width = width;
         this.height = height;
-        this.name = "Прямоугольник"
         Shape.count++
     }
 
@@ -82,7 +80,6 @@ class Circle extends Shape {
     constructor(radius) {
         super()
         this.radius = radius
-        this.name = "Окружность"
         Shape.count++
     }
 
